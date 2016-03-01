@@ -19,9 +19,8 @@ class ViewController: UIViewController, UITableViewDataSource {
     
     let model = [
         // TODO: Fill this array with data
-        "Do",
-        "Re",
-        "Mi"
+        ["":""],["":""],["":""],["":""],["":""],["":""]
+       
     ]
     
     // Add the two essential table data source methods here
