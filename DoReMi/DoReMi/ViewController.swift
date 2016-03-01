@@ -33,6 +33,23 @@ class ViewController: UIViewController, UITableViewDataSource {
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         //TODO: Implement method to return cell with the correct reuseidentifier and populated with the correct data.
+        
+        /*
+        // TODO: Implement method
+        // 1. Dequeue a reusable cell from the table, using the correct “reuse identifier”
+        // 2. Find the model object that corresponds to that row
+        // 3. Set the images and labels in the cell with the data from the model object
+        // 4. return the cell.
+        
+        let cell = tableView.dequeueReusableCellWithIdentifier("FavoriteThingCell")
+        cell!.textLabel!.text = favoriteThings[indexPath.row]
+        return cell!
+        */
+        
+        let cell = tableView.dequeueReusableCellWithIdentifier(cellReuseIdentifier)!
+        cell.textLabel?.text = model[indexPath.row]
+        return cell
+        
     }
 
 }
