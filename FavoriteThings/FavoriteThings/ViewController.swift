@@ -44,8 +44,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
       // 3. Set the images and labels in the cell with the data from the model object
       // 4. return the cell.
         
-        let placeholderCell = UITableViewCell()
-        return placeholderCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("FavoriteThingsCell")
+        cell!.textLabel!.text = favoriteThings[indexPath.row]
+        return cell!
     }
 }
 
