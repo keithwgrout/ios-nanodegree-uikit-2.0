@@ -34,7 +34,7 @@ class ViewController: UIViewController, UITableViewDataSource {
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell =  tableView.dequeueReusableCellWithIdentifier(self.cellReuseIdentifier) as! UITableViewCell
+        let cell =  tableView.dequeueReusableCellWithIdentifier(self.cellReuseIdentifier)!
         
         let dictionary = self.model[indexPath.row]
         
