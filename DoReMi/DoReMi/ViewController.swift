@@ -18,9 +18,13 @@ class ViewController: UIViewController, UITableViewDataSource {
     // Choose some data to show in your table
     
     let model = [
-        // TODO: Fill this array with data
-        ["":""],["":""],["":""],["":""],["":""],["":""]
-       
+        ["text" : "Do", "detail" : "A deer. A female deer."],
+        ["text" : "Re", "detail" : "A drop of golden sun."],
+        ["text" : "Mi", "detail" : "A name, I call myself."],
+        ["text" : "Fa", "detail" : "A long long way to run."],
+        ["text" : "So", "detail" : "A needle pulling thread."],
+        ["text" : "La", "detail" : "A note to follow So."],
+        ["text" : "Ti", "detail" : "A drink with jam and bread."]
     ]
     
     // Add the two essential table data source methods here
@@ -31,7 +35,6 @@ class ViewController: UIViewController, UITableViewDataSource {
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        //TODO: Implement method to return cell with the correct reuseidentifier and populated with the correct data.
         
         /*
         // TODO: Implement method
@@ -39,14 +42,12 @@ class ViewController: UIViewController, UITableViewDataSource {
         // 2. Find the model object that corresponds to that row
         // 3. Set the images and labels in the cell with the data from the model object
         // 4. return the cell.
-        
-        let cell = tableView.dequeueReusableCellWithIdentifier("FavoriteThingCell")
-        cell!.textLabel!.text = favoriteThings[indexPath.row]
-        return cell!
         */
         
         let cell = tableView.dequeueReusableCellWithIdentifier(cellReuseIdentifier)!
-        cell.textLabel?.text = model[indexPath.row]
+        let object = model[indexPath.row]
+        cell.textLabel?.text = object["text"]
+        cell.detailTextLabel?.text = object["detail"]
         return cell
         
     }
