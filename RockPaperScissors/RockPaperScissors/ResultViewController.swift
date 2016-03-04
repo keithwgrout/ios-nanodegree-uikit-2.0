@@ -19,9 +19,7 @@ class ResultViewController: UIViewController {
     var  picture: UIImage!
     
     @IBOutlet weak var playAgainButton: UIButton!
-    override func viewDidLoad() {
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Start Over", style: UIBarButtonItemStyle.Plain, target: self, action: "startOver")
-    }
+    
     override func viewWillAppear(animated:Bool)
     {
         super.viewWillAppear(animated)
@@ -48,7 +46,7 @@ class ResultViewController: UIViewController {
     
     @IBAction func playAgainButtonPressed(sender: AnyObject)
     {
-        dismissViewControllerAnimated(true, completion: nil)
+        startOver()
     }
     
     func messageForMatch(match: RPSMatch) -> String {
