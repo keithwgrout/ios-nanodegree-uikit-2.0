@@ -24,7 +24,7 @@ enum RPS: Comparable {
     }
 }
 
-func <(lhs: RPS, rhs: RPS) -> Bool {
+func < (lhs: RPS, rhs: RPS) -> Bool {
     
     switch (lhs, rhs) {
     case (.Rock, .Paper), (.Paper, .Scissors), (.Scissors, .Rock):

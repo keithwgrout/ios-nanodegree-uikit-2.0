@@ -19,12 +19,21 @@ class ResultViewController: UIViewController {
     var  picture: UIImage!
     
     @IBOutlet weak var playAgainButton: UIButton!
-    
+    override func viewDidLoad() {
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Start Over", style: UIBarButtonItemStyle.Plain, target: self, action: "startOver")
+    }
     override func viewWillAppear(animated:Bool)
     {
         super.viewWillAppear(animated)
         self.messageLabel.text = messageForMatch(match)
         self.resultImageView.image = imageForMatch(match)
+        
+    }
+    
+    func startOver(){
+        if let navCtrl = navigationController {
+            navCtrl.popToRootViewControllerAnimated(true)
+        }
     }
 
     override func viewDidAppear(animated: Bool)

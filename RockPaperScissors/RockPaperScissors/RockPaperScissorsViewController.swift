@@ -25,13 +25,13 @@ class RockPaperScissorsViewController: UIViewController {
     @IBAction func makeYourMove(sender: UIButton) {
         
         switch (sender) {
-        case self.rockButton:
+        case rockButton:
             throwDown(RPS.Rock)
             
-        case self.paperButton:
+        case paperButton:
             throwDown(RPS.Paper)
 
-        case self.scissorsButton:
+        case scissorsButton:
             throwDown(RPS.Scissors)
         
         default:
@@ -42,7 +42,7 @@ class RockPaperScissorsViewController: UIViewController {
     func throwDown(playersMove: RPS)
     {
         let computersMove = RPS()
-        self.match = RPSMatch(playersMove, computersMove)
+        match = RPSMatch(playersMove, computersMove)
         
         //Here are the 3 ways of presenting a View Controller
         
