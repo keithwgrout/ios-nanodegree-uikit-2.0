@@ -12,7 +12,7 @@ import Foundation
 
 enum RPS {
     case Rock, Paper, Scissors
-
+    
     // The init method randomly generates the opponent's move
     init() {
         switch arc4random() % 3 {
