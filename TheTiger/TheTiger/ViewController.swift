@@ -14,5 +14,9 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
     }
+    
+    deinit {
+        print("VC Deallocated")
+    }
 }
 
