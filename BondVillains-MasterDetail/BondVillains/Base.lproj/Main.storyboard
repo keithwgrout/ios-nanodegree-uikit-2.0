@@ -62,7 +62,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="collCell" id="pJA-St-Njd" customClass="CollectionViewCell" customModule="BondVillains" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CollectionViewCell" id="pJA-St-Njd" customClass="CollectionViewCell" customModule="BondVillains" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="64" width="127" height="126"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -70,20 +70,30 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fxx-Fl-AsQ">
-                                                    <rect key="frame" x="42" y="52" width="42" height="21"/>
+                                                    <rect key="frame" x="42" y="97" width="42" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0dI-mV-HLz">
+                                                    <rect key="frame" x="28" y="19" width="70" height="70"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="70" id="hGa-QG-vHg"/>
+                                                        <constraint firstAttribute="height" constant="70" id="lQS-LI-zyo"/>
+                                                    </constraints>
+                                                </imageView>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <constraints>
-                                            <constraint firstItem="fxx-Fl-AsQ" firstAttribute="centerX" secondItem="pJA-St-Njd" secondAttribute="centerX" id="BHz-h9-MmJ"/>
-                                            <constraint firstItem="fxx-Fl-AsQ" firstAttribute="centerY" secondItem="pJA-St-Njd" secondAttribute="centerY" id="xiq-sm-Whf"/>
+                                            <constraint firstItem="0dI-mV-HLz" firstAttribute="centerX" secondItem="pJA-St-Njd" secondAttribute="centerX" id="1sP-nM-uRE"/>
+                                            <constraint firstItem="fxx-Fl-AsQ" firstAttribute="centerX" secondItem="0dI-mV-HLz" secondAttribute="centerX" id="cpk-fW-ZxJ"/>
+                                            <constraint firstItem="fxx-Fl-AsQ" firstAttribute="top" secondItem="0dI-mV-HLz" secondAttribute="bottom" constant="8" id="e0k-dw-cUl"/>
+                                            <constraint firstItem="0dI-mV-HLz" firstAttribute="top" secondItem="pJA-St-Njd" secondAttribute="topMargin" constant="11" id="nuN-vF-g0O"/>
                                         </constraints>
                                         <connections>
                                             <outlet property="cellLabel" destination="fxx-Fl-AsQ" id="gSk-qh-YuI"/>
+                                            <outlet property="imageView" destination="0dI-mV-HLz" id="5Wu-HH-ZuK"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>

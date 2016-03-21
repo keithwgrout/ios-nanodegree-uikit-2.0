@@ -17,9 +17,10 @@ class VillainsCollection: UIViewController, UICollectionViewDelegate, UICollecti
         let villain = villains[indexPath.row]
         let villainImage = UIImage(named: villain.imageName)
         
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("collCell", forIndexPath: indexPath) as! CollectionViewCell
+        
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("CollectionViewCell", forIndexPath: indexPath) as! CollectionViewCell
         cell.cellLabel.text = villain.name
-//        cell.imageView.image = villainImage!
+        cell.imageView.image = villainImage
         
         return cell
         
